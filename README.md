@@ -1,4 +1,4 @@
-# Crypto Token Swap
+# CryptoBen
 
 A React application for swapping between different cryptocurrencies using USD as a base currency.
 
