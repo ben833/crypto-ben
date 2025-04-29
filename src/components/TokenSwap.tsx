@@ -24,7 +24,7 @@ const TokenSwap: React.FC = () => {
     if (sourceToken && !targetToken) {
       return "Select your target currency";
     }
-    return "Select your source and target currency";
+    return "Select your source and target currencies";
   };
   
   return (
