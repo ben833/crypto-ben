@@ -38,18 +38,6 @@ export const fetchTokenPrice = async (tokenAddress: string, chainId: string): Pr
     return priceInfo.unitPrice;
   } catch (error) {
     console.error(`Error fetching price for token ${tokenAddress}:`, error);
-    // Return a fallback price based on the token
-    const symbol = Object.values(TOKEN_CONFIG).find(t => t.address === tokenAddress)?.symbol;
-    switch (symbol) {
-      case 'USDC':
-      case 'USDT':
-        return 1;
-      case 'ETH':
-        return 3000;
-      case 'WBTC':
-        return 50000;
-      default:
-        return 0;
-    }
+    return 0;
   }
 }; 
