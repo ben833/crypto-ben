@@ -33,9 +33,17 @@ const TokenSwap: React.FC = () => {
       <div className="usd-input">
         <label>
           $<input
-            type="number"
+            type="text"
+            inputMode="decimal"
+            pattern="[0-9]*\.?[0-9]*"
             value={usdAmount}
-            onChange={(e) => setUsdAmount(e.target.value)}
+            onChange={(e) => {
+              const value = e.target.value;
+              // Only allow numbers and a single decimal point
+              if (/^\d*\.?\d*$/.test(value)) {
+                setUsdAmount(value);
+              }
+            }}
             placeholder="Dollar amount"
           />
         </label>
