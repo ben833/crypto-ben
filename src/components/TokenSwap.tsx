@@ -17,7 +17,16 @@ const TokenSwap: React.FC = () => {
     setSourceToken,
     setTargetToken
   } = useTokenSwap();
-
+  const getInstructionText = () => {
+    if (!usdAmount) {
+      return "Enter your USD amount";
+    }
+    if (sourceToken && !targetToken) {
+      return "Select your target currency";
+    }
+    return "Select your source and target currency";
+  };
+  
   return (
     <div className="token-swap-container">
       <h1>Token Swap</h1>
@@ -27,12 +36,13 @@ const TokenSwap: React.FC = () => {
             type="number"
             value={usdAmount}
             onChange={(e) => setUsdAmount(e.target.value)}
-            placeholder="Enter USD amount"
-            min="0.00"
-            max="10000000"
-            step="1.00"
+            placeholder="Dollar amount"
           />
         </label>
+      </div>
+
+      <div className="instruction-text">
+        {getInstructionText()}
       </div>
       <div className="token-options">
         {TOKENS.map((token) => (

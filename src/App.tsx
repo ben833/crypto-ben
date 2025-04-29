@@ -7,8 +7,10 @@ const App: React.FC = () => {
     <div className="App">
       <header className="App-header">
         <h1>CryptoBen</h1>
-        <TokenSwap />
       </header>
+      <main>
+        <TokenSwap />
+      </main>
     </div>
   );
 };
