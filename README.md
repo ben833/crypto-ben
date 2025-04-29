@@ -5,11 +5,8 @@ A React application for swapping between different cryptocurrencies using USD as
 ## Live Demo
 The application is live at [https://crypto-ben.vercel.app/](https://crypto-ben.vercel.app/)
 
-## Repository Access
-This is a private repository. To get access:
-1. Contact the repository owner for an invite
-2. Once invited, you'll receive an email notification
-3. Accept the invitation to gain access to the repository
+## Repository
+The source code is available on GitHub: [https://github.com/ben833/crypto-ben](https://github.com/ben833/crypto-ben)
 
 ## Getting Started
 
